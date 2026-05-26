@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto · Lina Herrera Gall</title>
+  <meta name="description" content="¿Quieres automatizar tu negocio o contratar una consultora para tu agencia? Escríbeme — respondo en menos de 48h." />
+  <link rel="canonical" href="https://linaherreragall.com/contacto" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contacto · Lina Herrera Gall" />
+  <meta property="og:description" content="¿Quieres automatizar tu negocio o contratar una consultora para tu agencia? Escríbeme — respondo en menos de 48h." />
+  <meta property="og:url" content="https://linaherreragall.com/contacto" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .hero--contacto {
+      padding-block: var(--space-xl);
+      background-color: var(--color-purple-dark);
+      color: var(--color-white);
+      text-align: center;
+    }
+
+    .hero--contacto h1 {
+      color: var(--color-white);
+      margin-inline: auto;
+    }
+
+    .hero--contacto .hero__subtitle {
+      color: rgba(255,255,255,0.85);
+      margin-inline: auto;
+      margin-top: var(--space-sm);
+      margin-bottom: var(--space-lg);
+      font-size: 1.12rem;
+      max-width: 48ch;
+    }
+
+    /* Contact info cards */
+    .contact-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-md);
+      max-width: 860px;
+      margin-inline: auto;
+      margin-bottom: var(--space-xl);
+    }
+
+    .contact-option {
+      background-color: var(--color-white);
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
+      text-align: center;
+      box-shadow: 0 2px 14px rgba(61,52,139,0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .contact-option__icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .contact-option h3 {
+      font-size: 1rem;
+      color: var(--color-purple-dark);
+    }
+
+    .contact-option p {
+      font-size: 0.88rem;
+      color: #777;
+      max-width: 28ch;
+      margin-inline: auto;
+    }
+
+    .contact-option a.contact-link {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-purple-dark);
+      word-break: break-all;
+    }
+
+    /* Form section */
+    .form-section {
+      max-width: 660px;
+      margin-inline: auto;
+    }
+
+    .form-section h2 {
+      text-align: center;
+      margin-bottom: var(--space-xs);
+    }
+
+    .form-section > p {
+      text-align: center;
+      color: #666;
+      margin-bottom: var(--space-lg);
+    }
+
+    /* Social section */
+    .social-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      max-width: 480px;
+      margin-inline: auto;
+    }
+
+    .social-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      background-color: var(--color-white);
+      border-radius: var(--radius-md);
+      padding: 1rem var(--space-md);
+      box-shadow: 0 2px 12px rgba(61,52,139,0.06);
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .social-item:hover {
+      transform: translateX(4px);
+      box-shadow: 0 6px 20px rgba(61,52,139,0.1);
+    }
+
+    .social-item__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--color-purple-dark);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .social-item__text { display: flex; flex-direction: column; }
+
+    .social-item__label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-purple-mid);
+    }
+
+    .social-item__handle {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--color-purple-dark);
+    }
+
+    .social-item__arrow {
+      margin-left: auto;
+      color: var(--color-purple-mid);
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Navegación principal">
+      <div class="nav__inner">
+        <a href="/" class="nav__logo" aria-label="Inicio — Lina Herrera Gall">
+          <img src="assets/logo-linagall.png" alt="Lina.gall" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span style="display:none;">Lina.gall</span>
+        </a>
+
+        <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__links" id="navLinks" role="list">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="membresia-latinizima.html">LATINIZIMA</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+
+        <a href="contacto.html" class="btn btn--primary nav__cta">Contáctame</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero--contacto" aria-labelledby="contacto-hero-heading">
+      <div class="container">
+        <h1 id="contacto-hero-heading">¿Hablamos?</h1>
+        <p class="hero__subtitle">Escríbeme y te respondo en menos de 48 horas — personalmente.</p>
+        <a href="https://wa.me/34603580660" target="_blank" rel="noopener" class="btn btn--primary" style="font-size:1.05rem;">
+          Escribir por WhatsApp →
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         OPCIONES DE CONTACTO
+         ============================================================ -->
+    <section class="section section--lavender" aria-label="Formas de contacto">
+      <div class="container">
+        <div class="contact-options">
+
+          <div class="contact-option">
+            <div class="contact-option__icon" aria-hidden="true">💬</div>
+            <h3>WhatsApp</h3>
+            <p>La forma más rápida. Respondo personalmente.</p>
+            <a href="https://wa.me/34603580660" target="_blank" rel="noopener" class="btn btn--primary" style="font-size:0.9rem;padding:0.6em 1.4em;">
+              Abrir WhatsApp →
+            </a>
+          </div>
+
+          <div class="contact-option">
+            <div class="contact-option__icon" aria-hidden="true">✉️</div>
+            <h3>Email</h3>
+            <p>Si prefieres escribir con más detalle.</p>
+            <a href="mailto:hola@linaherreragall.com" class="contact-link">hola@linaherreragall.com</a>
+          </div>
+
+          <div class="contact-option">
+            <div class="contact-option__icon" aria-hidden="true">📍</div>
+            <h3>Ubicación</h3>
+            <p>Con base en Barcelona. Trabajo 100% online con clientes en toda España y Latinoamérica.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FORMULARIO
+         ============================================================ -->
+    <section class="section section--peach" aria-labelledby="form-heading">
+      <div class="container">
+        <div class="form-section">
+          <h2 id="form-heading">O si prefieres el email</h2>
+          <p>Rellena el formulario y te respondo en menos de 48h.</p>
+
+          <!-- Conecta este formulario a Formspree (formspree.io) u otro
+               servicio: reemplaza el action con tu endpoint. -->
+          <form
+            class="form"
+            action="https://formspree.io/f/XXXXXXXXX"
+            method="POST"
+            aria-label="Formulario de contacto"
+          >
+            <div class="form__group">
+              <label class="form__label" for="nombre">Nombre</label>
+              <input class="form__input" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="email">Email</label>
+              <input class="form__input" type="email" id="email" name="email" placeholder="tu@email.com" required />
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="asunto">¿En qué puedo ayudarte?</label>
+              <select class="form__select" id="asunto" name="asunto" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="membresia">Membresía LATINIZIMA</option>
+                <option value="curso">Curso Modo Automático</option>
+                <option value="sesion">Sesión Estratégica</option>
+                <option value="agencia">Colaboración con agencia</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="mensaje">Mensaje</label>
+              <textarea class="form__textarea" id="mensaje" name="mensaje" placeholder="Cuéntame qué necesitas..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="align-self:flex-start;font-size:1.05rem;">
+              Enviar mensaje →
+            </button>
+
+            <p class="form__note">Respondo personalmente. Sin asistentes, sin bots.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         REDES SOCIALES
+         ============================================================ -->
+    <section class="section section--lavender" aria-labelledby="redes-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Encuéntrame en</p>
+          <h2 id="redes-heading">Redes sociales</h2>
+        </div>
+        <div class="social-list">
+
+          <a href="https://instagram.com/holalinah" target="_blank" rel="noopener" class="social-item">
+            <div class="social-item__icon" aria-hidden="true">📸</div>
+            <div class="social-item__text">
+              <span class="social-item__label">Instagram · Personal</span>
+              <span class="social-item__handle">@holalinah</span>
+            </div>
+            <span class="social-item__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="https://instagram.com/latinizima" target="_blank" rel="noopener" class="social-item">
+            <div class="social-item__icon" style="background-color:var(--color-orange);" aria-hidden="true">📸</div>
+            <div class="social-item__text">
+              <span class="social-item__label">Instagram · LATINIZIMA</span>
+              <span class="social-item__handle">@latinizima</span>
+            </div>
+            <span class="social-item__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/linaherreragall-marketingia/" target="_blank" rel="noopener" class="social-item">
+            <div class="social-item__icon" style="background-color:#0077b5;" aria-hidden="true">in</div>
+            <div class="social-item__text">
+              <span class="social-item__label">LinkedIn</span>
+              <span class="social-item__handle">Lina Herrera Gall</span>
+            </div>
+            <span class="social-item__arrow" aria-hidden="true">→</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div>
+          <p class="footer__brand-name">Lina.gall</p>
+          <p class="footer__tagline">Consultora de automatización y marketing digital · Barcelona</p>
+          <nav class="footer__social" aria-label="Redes sociales">
+            <a href="https://instagram.com/holalinah" target="_blank" rel="noopener" aria-label="Instagram personal @holalinah">IG</a>
+            <a href="https://instagram.com/latinizima" target="_blank" rel="noopener" aria-label="Instagram LATINIZIMA @latinizima">LT</a>
+            <a href="https://www.linkedin.com/in/linaherreragall-marketingia/" target="_blank" rel="noopener" aria-label="LinkedIn">Li</a>
+          </nav>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Páginas</p>
+          <ul class="footer__links">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">LATINIZIMA</p>
+          <ul class="footer__links">
+            <li><a href="membresia-latinizima.html">Membresía</a></li>
+            <li><a href="modo-automatico.html">Modo Automático</a></li>
+            <li><a href="sesion-estrategica.html">Sesión Estratégica</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Lina Herrera Gall · linaherreragall.com</span>
+        <span>Hecho con intención — Barcelona</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+
+</body>
+</html>
