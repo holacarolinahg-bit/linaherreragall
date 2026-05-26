@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Membresía LATINIZIMA · Comunidad para Emprendedoras que Automatizan</title>
+  <meta name="description" content="Únete a la membresía LATINIZIMA por €37/mes. Templates, recursos y comunidad mensual para emprendedoras que quieren automatizar su negocio sin equipo." />
+  <meta name="keywords" content="membresía para emprendedoras online, LATINIZIMA, automatización negocios" />
+  <link rel="canonical" href="https://linaherreragall.com/membresia-latinizima" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Membresía LATINIZIMA · Comunidad para Emprendedoras que Automatizan" />
+  <meta property="og:description" content="Únete a la membresía LATINIZIMA por €37/mes. Templates, recursos y comunidad mensual para emprendedoras que quieren automatizar su negocio sin equipo." />
+  <meta property="og:url" content="https://linaherreragall.com/membresia-latinizima" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Hero gradient de marca */
+    .hero--membresia {
+      padding-block: var(--space-xl);
+      background: linear-gradient(135deg, var(--color-purple-dark) 0%, #5a4fb5 100%);
+      color: var(--color-white);
+      text-align: center;
+    }
+
+    .hero--membresia h1 {
+      color: var(--color-white);
+      margin-inline: auto;
+      max-width: 20ch;
+    }
+
+    .hero--membresia .hero__subtitle {
+      color: rgba(255,255,255,0.88);
+      margin-inline: auto;
+      margin-top: var(--space-md);
+      max-width: 54ch;
+      font-size: 1.12rem;
+    }
+
+    .hero--membresia .eyebrow { color: var(--color-peach); }
+
+    .hero--membresia .hero__ctas {
+      justify-content: center;
+      margin-top: var(--space-lg);
+    }
+
+    /* Includes grid */
+    .includes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-md);
+    }
+
+    .include-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .include-item__icon {
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .include-item h3 {
+      font-size: 1.05rem;
+      color: var(--color-purple-dark);
+    }
+
+    .include-item p {
+      font-size: 0.93rem;
+      color: #555;
+      max-width: 38ch;
+    }
+
+    /* Price block centrado */
+    .price-section {
+      text-align: center;
+    }
+
+    .price-big {
+      font-family: var(--font-heading);
+      font-size: clamp(4rem, 10vw, 7rem);
+      font-weight: 700;
+      color: var(--color-purple-dark);
+      line-height: 1;
+    }
+
+    .price-period {
+      font-size: 1.1rem;
+      color: #888;
+      margin-top: 0.3rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .price-condition {
+      font-size: 0.9rem;
+      color: #999;
+      margin-top: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Navegación principal">
+      <div class="nav__inner">
+        <a href="/" class="nav__logo" aria-label="Inicio — Lina Herrera Gall">
+          <img src="assets/logo-linagall.png" alt="Lina.gall" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span style="display:none;">Lina.gall</span>
+        </a>
+
+        <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__links" id="navLinks" role="list">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="membresia-latinizima.html" class="active">LATINIZIMA</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <a href="contacto.html" class="btn btn--primary nav__cta">Contáctame</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero--membresia" aria-labelledby="membresia-hero-heading">
+      <div class="container">
+        <p class="eyebrow">Membresía mensual · €37/mes · Cancela cuando quieras</p>
+        <h1 id="membresia-hero-heading">La comunidad donde las emprendedoras aprenden a automatizar</h1>
+        <p class="hero__subtitle">Cada mes, recursos nuevos, templates listos para usar y una comunidad que entiende exactamente por lo que estás pasando.</p>
+        <div class="hero__ctas">
+          <a href="#precio" class="btn btn--primary">Quiero unirme →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PARA QUIÉN
+         ============================================================ -->
+    <section class="section section--lavender" aria-labelledby="para-quien-heading">
+      <div class="container" style="max-width:780px;">
+        <div class="section-header">
+          <p class="eyebrow">¿Es para ti?</p>
+          <h2 id="para-quien-heading">Esta membresía es para ti si...</h2>
+        </div>
+        <ul class="checklist" style="max-width:560px;margin-inline:auto;">
+          <li>Tienes un negocio en marcha o lo estás lanzando ahora</li>
+          <li>Sabes que necesitas automatizar pero no sabes por dónde empezar</li>
+          <li>No tienes presupuesto para contratar equipo todavía</li>
+          <li>Quieres aprender con apoyo, no sola frente a tutoriales de YouTube</li>
+          <li>Buscas una comunidad latina que hable tu idioma — en todos los sentidos</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         QUÉ INCLUYE
+         ============================================================ -->
+    <section class="section section--peach" aria-labelledby="incluye-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Contenido mensual</p>
+          <h2 id="incluye-heading">Qué encuentras cada mes</h2>
+        </div>
+        <div class="includes-grid">
+
+          <div class="include-item">
+            <div class="include-item__icon" aria-hidden="true">🎙️</div>
+            <h3>Sesión en vivo mensual con Lina</h3>
+            <p>Una vez al mes nos conectamos en directo — sesión de implementación, Q&A o hot seat donde trabajamos tu negocio en tiempo real. Siempre grabada.</p>
+          </div>
+
+          <div class="include-item">
+            <div class="include-item__icon" aria-hidden="true">🎓</div>
+            <h3>Masterclass con invitadas expertas</h3>
+            <p>Traigo a personas que saben de lo que hablan — copywriting, finanzas, redes, legal, IA — para que sigas creciendo más allá de la automatización.</p>
+          </div>
+
+          <div class="include-item">
+            <div class="include-item__icon" aria-hidden="true">📋</div>
+            <h3>Templates y recursos del mes</h3>
+            <p>Plantillas de procesos, flujos y sistemas listos para aplicar directamente a tu negocio. Sin empezar desde cero.</p>
+          </div>
+
+          <div class="include-item">
+            <div class="include-item__icon" aria-hidden="true">🎁</div>
+            <h3>Sorpresas del mes</h3>
+            <p>Recursos extra, acceso anticipado a nuevos materiales o descuentos en futuros productos. No te cuento qué es — por eso se llama sorpresa.</p>
+          </div>
+
+          <div class="include-item">
+            <div class="include-item__icon" aria-hidden="true">💬</div>
+            <h3>Comunidad activa</h3>
+            <p>Un espacio donde preguntar, compartir avances y conectar con emprendedoras que están exactamente en el mismo camino.</p>
+          </div>
+
+          <div class="include-item">
+            <div class="include-item__icon" aria-hidden="true">🗂️</div>
+            <h3>Acceso a todo el contenido anterior</h3>
+            <p>Sesiones grabadas, masterclasses, templates y recursos de todos los meses anteriores — desde el día uno.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRECIO
+         ============================================================ -->
+    <section class="section section--lavender price-section" id="precio" aria-labelledby="precio-heading">
+      <div class="container" style="max-width:600px;">
+        <p class="eyebrow" style="text-align:center;">Sin compromiso de permanencia</p>
+        <h2 id="precio-heading" style="text-align:center;margin-bottom:var(--space-sm);">€37 al mes</h2>
+        <p class="price-period">Cancela cuando quieras</p>
+        <a href="#" class="btn btn--primary" style="font-size:1.1rem;padding:1em 2.5em;">Unirme a la membresía →</a>
+        <p class="price-condition">¿Tienes dudas? <a href="contacto.html" style="color:var(--color-purple-dark);font-weight:600;text-decoration:underline;">Escríbeme antes de entrar.</a></p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
+    <section class="section section--peach" aria-labelledby="faq-membresia-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="faq-membresia-heading">Preguntas frecuentes</h2>
+        </div>
+        <div class="faq">
+
+          <div class="faq__item">
+            <p class="faq__question">¿Cuándo puedo cancelar?</p>
+            <p class="faq__answer">Cuando quieras. Si cancelas antes de la renovación, no se cobra el mes siguiente. Sin penalizaciones, sin letras pequeñas.</p>
+          </div>
+
+          <div class="faq__item">
+            <p class="faq__question">¿Hay contenido nuevo cada mes?</p>
+            <p class="faq__answer">Sí. Cada mes hay nuevos templates, recursos o sesiones grupales. El contenido no se repite.</p>
+          </div>
+
+          <div class="faq__item">
+            <p class="faq__question">¿Es solo para latinas?</p>
+            <p class="faq__answer">Está pensada para emprendedoras latinas pero es abierta a cualquier hispanohablante. Lo importante es que te identifiques con la comunidad.</p>
+          </div>
+
+          <div class="faq__item">
+            <p class="faq__question">¿Tengo acceso al contenido anterior?</p>
+            <p class="faq__answer">Sí, desde el momento en que entras. Accedes a todas las sesiones grabadas, masterclasses y templates de meses anteriores.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA FINAL — fondo oscuro
+         ============================================================ -->
+    <section class="section section--dark" aria-labelledby="membresia-cta-heading">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 id="membresia-cta-heading">¿Quieres ver si el curso encaja mejor contigo?</h2>
+          <p>Si buscas un programa completo de una sola vez — Modo Automático es tu siguiente paso.</p>
+          <div class="cta-banner__actions">
+            <a href="modo-automatico.html" class="btn btn--outline-white">Ver el curso →</a>
+            <a href="#precio" class="btn btn--primary">Unirme a la membresía →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div>
+          <p class="footer__brand-name">Lina.gall</p>
+          <p class="footer__tagline">Consultora de automatización y marketing digital · Barcelona</p>
+          <nav class="footer__social" aria-label="Redes sociales">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">Li</a>
+            <a href="#" aria-label="TikTok">Tk</a>
+          </nav>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Páginas</p>
+          <ul class="footer__links">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">LATINIZIMA</p>
+          <ul class="footer__links">
+            <li><a href="membresia-latinizima.html">Membresía</a></li>
+            <li><a href="modo-automatico.html">Modo Automático</a></li>
+            <li><a href="sesion-estrategica.html">Sesión Estratégica</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Lina Herrera Gall · linaherreragall.com</span>
+        <span>Hecho con intención — Barcelona</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+
+</body>
+</html>
