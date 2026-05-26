@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre mí · Lina Herrera Gall, Consultora de Automatización en España</title>
+  <meta name="description" content="Soy Lina Herrera Gall, consultora de automatización y marketing digital en Barcelona. Conóceme, mi historia y por qué creé LATINIZIMA." />
+  <meta name="keywords" content="consultora de automatización España, Lina Herrera Gall, LATINIZIMA" />
+  <link rel="canonical" href="https://linaherreragall.com/sobre-mi" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sobre mí · Lina Herrera Gall, Consultora de Automatización en España" />
+  <meta property="og:description" content="Soy Lina Herrera Gall, consultora de automatización y marketing digital en Barcelona. Conóceme, mi historia y por qué creé LATINIZIMA." />
+  <meta property="og:url" content="https://linaherreragall.com/sobre-mi" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ---- page-specific ---- */
+    .hero--sobre {
+      padding-block: var(--space-xl);
+      background-color: var(--color-purple-dark);
+      color: var(--color-white);
+    }
+
+    .hero--sobre .eyebrow { color: var(--color-peach); }
+
+    .hero--sobre h1 {
+      color: var(--color-white);
+      max-width: 16ch;
+    }
+
+    .hero--sobre .hero__subtitle {
+      color: rgba(255,255,255,0.85);
+      max-width: 52ch;
+    }
+
+    /* values cards */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-md);
+    }
+
+    .value-card {
+      background-color: var(--color-white);
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
+      border-left: 4px solid var(--color-orange);
+    }
+
+    .value-card__word {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-purple-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .value-card p { font-size: 0.95rem; color: #555; max-width: 100%; }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Navegación principal">
+      <div class="nav__inner">
+        <a href="/" class="nav__logo" aria-label="Inicio — Lina Herrera Gall">
+          <img src="assets/logo-linagall.png" alt="Lina.gall" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span style="display:none;">Lina.gall</span>
+        </a>
+
+        <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__links" id="navLinks" role="list">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="sobre-mi.html" class="active">Sobre mí</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="membresia-latinizima.html">LATINIZIMA</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <a href="contacto.html" class="btn btn--primary nav__cta">Contáctame</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero--sobre" aria-labelledby="sobre-hero-heading">
+      <div class="container">
+        <p class="eyebrow">Consultora de automatización · Barcelona</p>
+        <h1 id="sobre-hero-heading">Hola, soy Lina Herrera Gall</h1>
+        <p class="hero__subtitle" style="margin-top:var(--space-md);">Consultora de automatización y marketing digital. Latina en España. Y la persona que va a ayudarte a dejar de hacerlo todo sola.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HISTORIA — con foto
+         ============================================================ -->
+    <section class="section section--lavender" aria-labelledby="historia-heading">
+      <div class="container">
+        <div class="split">
+          <div class="split__content">
+            <h2 id="historia-heading">Llegué a España con muchas ganas y una libreta llena de ideas</h2>
+            <div class="divider"></div>
+            <div class="prose">
+              <p>⚠ <em>Este espacio es para tu historia personal — de dónde vienes, cómo llegaste, el momento en que decidiste sistematizar. Cuanto más específica y honesta, más conecta.</em></p>
+              <p>Lo que sí sé es esto: cuando empecé, intenté hacerlo todo sola. Gestionar clientes, crear contenido, hacer seguimiento, responder mensajes, llevar las cuentas. Y en algún momento me pregunté — ¿para qué estudié y aprendí todo lo que sé, si lo estoy usando para apagar incendios?</p>
+              <p>Ahí empezó todo.</p>
+            </div>
+          </div>
+          <div class="split__image" aria-hidden="true">
+            <div class="placeholder-img" style="aspect-ratio:4/5;width:100%;">
+              FOTO LINA — 600×750 px<br/><small>Foto con contexto personal, tono cálido</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         POR QUÉ LATINIZIMA
+         ============================================================ -->
+    <section class="section section--peach" aria-labelledby="latinizima-heading">
+      <div class="container" style="max-width:800px;">
+        <p class="eyebrow">El origen</p>
+        <h2 id="latinizima-heading">Por qué creé LATINIZIMA</h2>
+        <div class="divider"></div>
+        <div class="prose">
+          <p>Porque vi que no era la única.</p>
+          <p>Hay miles de emprendedoras latinas con talento, con conocimiento, con un negocio real — pero sin los sistemas para hacerlo crecer. No porque les falte capacidad. Porque nadie les había enseñado a construir la estructura.</p>
+          <p>LATINIZIMA nació para cambiar eso. Es mi comunidad, mi curso y mi espacio para enseñar automatización a quien empieza con ganas pero sin un equipo detrás.</p>
+          <p>Creo que no necesitas más herramientas. Necesitas el sistema correcto.</p>
+        </div>
+        <a href="membresia-latinizima.html" class="btn btn--primary" style="margin-top:var(--space-md);">Conoce LATINIZIMA →</a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CÓMO TRABAJO — 3 bloques
+         ============================================================ -->
+    <section class="section section--lavender" aria-labelledby="como-trabajo-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="como-trabajo-heading">Mi forma de trabajar</h2>
+        </div>
+        <div class="icon-blocks">
+
+          <div class="icon-block">
+            <div class="icon-block__icon" aria-hidden="true">🔍</div>
+            <h3>Diagnóstico primero</h3>
+            <p>Antes de proponer nada, entiendo qué tienes, cómo funciona y dónde está el cuello de botella. Sin suponer, sin plantillas genéricas.</p>
+          </div>
+
+          <div class="icon-block">
+            <div class="icon-block__icon" aria-hidden="true">⚙️</div>
+            <h3>Sistemas a medida</h3>
+            <p>Lo que construimos juntas está pensado para tu contexto, tus herramientas y tu momento.</p>
+          </div>
+
+          <div class="icon-block">
+            <div class="icon-block__icon" aria-hidden="true">🚀</div>
+            <h3>Autonomía como resultado</h3>
+            <p>Mi objetivo no es que me necesites para siempre. Es que al terminar, sepas exactamente qué tienes y cómo escalarlo tú sola.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PARA AGENCIAS
+         ============================================================ -->
+    <section class="section section--lavender" style="background-color:var(--color-lavender);padding-top:0;" aria-labelledby="agencias-heading">
+      <div class="container">
+        <div style="background-color:var(--color-white);border-radius:var(--radius-lg);padding:var(--space-lg);box-shadow:0 4px 24px rgba(61,52,139,0.07);max-width:760px;margin-inline:auto;">
+          <p class="eyebrow">Para agencias y empresas</p>
+          <h2 id="agencias-heading">¿Buscas una consultora para tu agencia o equipo?</h2>
+          <div class="divider"></div>
+          <div class="prose">
+            <p>Además de trabajar con emprendedoras a través de LATINIZIMA, colaboro como consultora externa con agencias y empresas que necesitan expertise en automatización de procesos y estrategia de marketing digital.</p>
+            <p>Si buscas a alguien que entienda tanto la parte estratégica como la operativa — y que pueda implementar, no solo recomendar — hablemos.</p>
+          </div>
+          <a href="contacto.html" class="btn btn--primary" style="margin-top:var(--space-md);">Contáctame →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         VALORES
+         ============================================================ -->
+    <section class="section section--peach" aria-labelledby="valores-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="valores-heading">Lo que me mueve</h2>
+        </div>
+        <div class="values-grid">
+
+          <div class="value-card">
+            <p class="value-card__word">Practicidad</p>
+            <p>No trabajo con ideas bonitas que no se pueden ejecutar. Todo lo que propongo tiene un siguiente paso concreto.</p>
+          </div>
+
+          <div class="value-card">
+            <p class="value-card__word">Accesibilidad</p>
+            <p>La automatización no es solo para quienes tienen presupuesto. Mi trabajo es hacer que funcione para quien empieza.</p>
+          </div>
+
+          <div class="value-card">
+            <p class="value-card__word">Honestidad</p>
+            <p>Si algo no es para ti, te lo digo. Prefiero eso a venderte algo que no necesitas.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA FINAL — fondo oscuro
+         ============================================================ -->
+    <section class="section section--dark" aria-labelledby="sobre-cta-heading">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 id="sobre-cta-heading">¿Trabajamos juntas?</h2>
+          <p>Si algo de lo que has leído resuena contigo, da el siguiente paso.</p>
+          <div class="cta-banner__actions">
+            <a href="servicios.html" class="btn btn--primary">Ver servicios LATINIZIMA →</a>
+            <a href="contacto.html" class="btn btn--outline-white">Contrátame como consultora →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div>
+          <p class="footer__brand-name">Lina.gall</p>
+          <p class="footer__tagline">Consultora de automatización y marketing digital · Barcelona</p>
+          <nav class="footer__social" aria-label="Redes sociales">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">Li</a>
+            <a href="#" aria-label="TikTok">Tk</a>
+          </nav>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Páginas</p>
+          <ul class="footer__links">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">LATINIZIMA</p>
+          <ul class="footer__links">
+            <li><a href="membresia-latinizima.html">Membresía</a></li>
+            <li><a href="modo-automatico.html">Modo Automático</a></li>
+            <li><a href="sesion-estrategica.html">Sesión Estratégica</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 Lina Herrera Gall · linaherreragall.com</span>
+        <span>Hecho con intención — Barcelona</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+
+</body>
+</html>
