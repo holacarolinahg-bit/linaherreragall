@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios · Lina Herrera Gall, Consultora de Automatización</title>
+  <meta name="description" content="Membresía, curso grabado y sesiones 1:1 para automatizar tu negocio. O contrátame como consultora externa. Descubre todos mis servicios." />
+  <meta name="keywords" content="servicios de automatización para emprendedoras, LATINIZIMA, consultoría digital Barcelona" />
+  <link rel="canonical" href="https://linaherreragall.com/servicios" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Servicios · Lina Herrera Gall, Consultora de Automatización" />
+  <meta property="og:description" content="Membresía, curso grabado y sesiones 1:1 para automatizar tu negocio. O contrátame como consultora externa." />
+  <meta property="og:url" content="https://linaherreragall.com/servicios" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .hero--servicios {
+      padding-block: var(--space-xl);
+      background-color: var(--color-purple-dark);
+      color: var(--color-white);
+      text-align: center;
+    }
+
+    .hero--servicios h1 { color: var(--color-white); margin-inline: auto; }
+
+    .hero--servicios .hero__subtitle {
+      color: rgba(255,255,255,0.85);
+      margin-inline: auto;
+      margin-top: var(--space-md);
+      max-width: 56ch;
+      font-size: 1.15rem;
+    }
+
+    /* Quick guide arrows */
+    .guide-list {
+      list-style: none;
+      max-width: 640px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .guide-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      font-size: 1.05rem;
+    }
+
+    .guide-list li::before {
+      content: '→';
+      color: var(--color-orange);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .guide-list strong {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      color: var(--color-purple-dark);
+    }
+
+    /* Service cards — larger, more detail */
+    .service-card {
+      background-color: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: 0 4px 28px rgba(61,52,139,0.08);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: var(--space-md);
+      align-items: start;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 40px rgba(61,52,139,0.13);
+    }
+
+    .service-card--featured {
+      border: 2px solid var(--color-orange);
+      position: relative;
+    }
+
+    .service-card__badge {
+      position: absolute;
+      top: -14px;
+      left: var(--space-md);
+      background-color: var(--color-orange);
+      color: var(--color-white);
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3em 1em;
+      border-radius: 20px;
+    }
+
+    .service-card__body { display: flex; flex-direction: column; gap: var(--space-sm); }
+
+    .service-card__tag {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-purple-mid);
+    }
+
+    .service-card__title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-purple-dark);
+      line-height: 1.2;
+    }
+
+    .service-card__desc {
+      font-size: 0.98rem;
+      color: #555;
+      max-width: 52ch;
+    }
+
+    .service-card__price-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: var(--space-sm);
+      min-width: 160px;
+    }
+
+    .service-card__price {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--color-purple-dark);
+      line-height: 1;
+      text-align: right;
+    }
+
+    .service-card__price span {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #888;
+      display: block;
+      margin-top: 0.2rem;
+    }
+
+    .services-stack {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    @media (max-width: 640px) {
+      .service-card {
+        grid-template-columns: 1fr;
+      }
+      .service-card__price-col {
+        align-items: flex-start;
+        min-width: unset;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Navegación principal">
+      <div class="nav__inner">
+        <a href="/" class="nav__logo" aria-label="Inicio — Lina Herrera Gall">
+          <img src="assets/logo-linagall.png" alt="Lina.gall" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span style="display:none;">Lina.gall</span>
+        </a>
+
+        <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__links" id="navLinks" role="list">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="servicios.html" class="active">Servicios</a></li>
+          <li><a href="membresia-latinizima.html">LATINIZIMA</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <a href="contacto.html" class="btn btn--primary nav__cta">Contáctame</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero--servicios" aria-labelledby="servicios-hero-heading">
+      <div class="container">
+        <h1 id="servicios-hero-heading">Elige cómo quieres empezar a automatizar</h1>
+        <p class="hero__subtitle">Tanto si estás empezando como si ya tienes un negocio y quieres que funcione sin que estés en todo — aquí está tu punto de entrada.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GUÍA RÁPIDA
+         ============================================================ -->
+    <section class="section section--lavender" aria-labelledby="guia-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Orientación rápida</p>
+          <h2 id="guia-heading">¿No sabes cuál es para ti?</h2>
+        </div>
+        <ul class="guide-list">
+          <li><strong>Aprender a tu ritmo con apoyo mensual:</strong> Membresía LATINIZIMA</li>
+          <li><strong>Programa completo de una sola vez:</strong> Modo Automático</li>
+          <li><strong>Resultados rápidos con acompañamiento directo:</strong> Sesión Estratégica</li>
+          <li><strong>Representas una agencia o empresa:</strong> Escríbeme directamente</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3 TARJETAS DE SERVICIOS
+         ============================================================ -->
+    <section class="section section--peach" aria-labelledby="mis-servicios-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="mis-servicios-heading">Mis servicios</h2>
+        </div>
+        <div class="services-stack">
+
+          <!-- Membresía -->
+          <article class="service-card">
+            <div class="service-card__body">
+              <span class="service-card__tag">Mensual · Cancela cuando quieras</span>
+              <h3 class="service-card__title">Membresía LATINIZIMA</h3>
+              <p class="service-card__desc">Recursos, templates y comunidad mensual para emprendedoras que quieren sistematizar sin equipo. Cada mes: sesión en vivo, masterclass con invitadas, templates listos para usar y acceso a todo el contenido anterior.</p>
+              <a href="membresia-latinizima.html" class="btn btn--primary" style="align-self:flex-start;">Ver membresía →</a>
+            </div>
+            <div class="service-card__price-col">
+              <div class="service-card__price">€37<span>/mes</span></div>
+            </div>
+          </article>
+
+          <!-- Modo Automático -->
+          <article class="service-card service-card--featured" style="position:relative;">
+            <div class="service-card__badge">Más completo</div>
+            <div class="service-card__body">
+              <span class="service-card__tag" style="color:var(--color-orange);">Curso grabado · Acceso de por vida</span>
+              <h3 class="service-card__title">Modo Automático by LATINIZIMA</h3>
+              <p class="service-card__desc">Programa paso a paso para construir los sistemas que te permiten trabajar menos horas sin ganar menos. Aprende a tu ritmo, implementa desde el primer módulo.</p>
+              <p style="font-size:0.88rem;color:var(--color-orange);font-weight:600;">🎁 Incluye 1 mes de Membresía LATINIZIMA gratis</p>
+              <a href="modo-automatico.html" class="btn btn--primary" style="align-self:flex-start;">Ver curso →</a>
+            </div>
+            <div class="service-card__price-col">
+              <div class="service-card__price">€247<span>pago único</span></div>
+            </div>
+          </article>
+
+          <!-- Sesión Estratégica -->
+          <article class="service-card">
+            <div class="service-card__body">
+              <span class="service-card__tag">Consultoría 1:1 · 90 minutos</span>
+              <h3 class="service-card__title">Sesión Estratégica</h3>
+              <p class="service-card__desc">Mapa de procesos completo + plan de acción concreto para tu negocio. Llego preparada, no improvisando. Te vas con pasos priorizados y ejecutables — no con una lista infinita de ideas.</p>
+              <p style="font-size:0.88rem;color:#666;">Pack 3 sesiones disponible por <strong>€747</strong> (ahorro de €144)</p>
+              <a href="sesion-estrategica.html" class="btn btn--primary" style="align-self:flex-start;">Reservar →</a>
+            </div>
+            <div class="service-card__price-col">
+              <div class="service-card__price">€297<span>por sesión</span></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA FINAL — para agencias
+         ============================================================ -->
+    <section class="section section--dark" aria-labelledby="agencias-cta-heading">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 id="agencias-cta-heading">¿Eres una agencia o empresa?</h2>
+          <p>Colaboro como consultora externa en proyectos de automatización y estrategia digital. Si necesitas expertise sin contratar un perfil fijo — hablamos.</p>
+          <div class="cta-banner__actions">
+            <a href="contacto.html" class="btn btn--primary">Contáctame →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div>
+          <p class="footer__brand-name">Lina.gall</p>
+          <p class="footer__tagline">Consultora de automatización y marketing digital · Barcelona</p>
+          <nav class="footer__social" aria-label="Redes sociales">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">Li</a>
+            <a href="#" aria-label="TikTok">Tk</a>
+          </nav>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Páginas</p>
+          <ul class="footer__links">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">LATINIZIMA</p>
+          <ul class="footer__links">
+            <li><a href="membresia-latinizima.html">Membresía</a></li>
+            <li><a href="modo-automatico.html">Modo Automático</a></li>
+            <li><a href="sesion-estrategica.html">Sesión Estratégica</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Lina Herrera Gall · linaherreragall.com</span>
+        <span>Hecho con intención — Barcelona</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+
+</body>
+</html>
