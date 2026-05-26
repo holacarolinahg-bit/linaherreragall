@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sesión Estratégica · Consultoría de Automatización 1:1 con Lina Herrera Gall</title>
+  <meta name="description" content="Sesión 1:1 de automatización y estrategia digital. €297 por sesión o pack de 3 por €747. Sal con un plan de acción concreto para tu negocio." />
+  <meta name="keywords" content="sesión estratégica de automatización, consultoría 1:1 emprendedoras, Lina Herrera Gall" />
+  <link rel="canonical" href="https://linaherreragall.com/sesion-estrategica" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sesión Estratégica · Consultoría 1:1 con Lina Herrera Gall" />
+  <meta property="og:description" content="Sesión 1:1 de automatización y estrategia digital. €297 por sesión o pack de 3 por €747. Sal con un plan de acción concreto para tu negocio." />
+  <meta property="og:url" content="https://linaherreragall.com/sesion-estrategica" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .hero--sesion {
+      padding-block: var(--space-xl);
+      background-color: var(--color-purple-dark);
+      color: var(--color-white);
+    }
+
+    .hero--sesion h1       { color: var(--color-white); max-width: 22ch; }
+    .hero--sesion .eyebrow { color: var(--color-peach); }
+
+    .hero--sesion .hero__subtitle {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.12rem;
+      margin-top: var(--space-sm);
+      margin-bottom: var(--space-lg);
+      max-width: 52ch;
+    }
+
+    /* 3 pasos numerados */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-md);
+      counter-reset: steps;
+    }
+
+    .step {
+      background-color: var(--color-white);
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
+      box-shadow: 0 2px 14px rgba(61,52,139,0.07);
+      position: relative;
+      padding-top: calc(var(--space-md) + 1.5rem);
+    }
+
+    .step::before {
+      counter-increment: steps;
+      content: counter(steps);
+      position: absolute;
+      top: -20px;
+      left: var(--space-md);
+      width: 44px;
+      height: 44px;
+      background-color: var(--color-orange);
+      color: var(--color-white);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step h3 {
+      font-size: 1.05rem;
+      color: var(--color-purple-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .step p { font-size: 0.93rem; color: #555; max-width: 100%; }
+
+    /* Pricing cards */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-md);
+      max-width: 760px;
+      margin-inline: auto;
+    }
+
+    .pricing-card {
+      background-color: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg) var(--space-md);
+      box-shadow: 0 4px 24px rgba(61,52,139,0.08);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      text-align: center;
+    }
+
+    .pricing-card--featured {
+      background-color: var(--color-purple-dark);
+      color: var(--color-white);
+      position: relative;
+    }
+
+    .pricing-card__badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--color-orange);
+      color: var(--color-white);
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3em 1.2em;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .pricing-card__name {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-purple-mid);
+    }
+
+    .pricing-card--featured .pricing-card__name { color: rgba(255,255,255,0.7); }
+
+    .pricing-card__price {
+      font-family: var(--font-heading);
+      font-size: clamp(2.8rem, 6vw, 4rem);
+      font-weight: 700;
+      color: var(--color-purple-dark);
+      line-height: 1;
+    }
+
+    .pricing-card--featured .pricing-card__price { color: var(--color-white); }
+
+    .pricing-card__detail {
+      font-size: 0.88rem;
+      color: #888;
+    }
+
+    .pricing-card--featured .pricing-card__detail { color: rgba(255,255,255,0.7); }
+
+    .pricing-card__features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: left;
+    }
+
+    .pricing-card__features li {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.92rem;
+      color: #555;
+    }
+
+    .pricing-card--featured .pricing-card__features li { color: rgba(255,255,255,0.85); }
+
+    .pricing-card__features li::before {
+      content: '✓';
+      color: var(--color-orange);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .pricing-card__savings {
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-orange);
+      background-color: rgba(243,91,4,0.08);
+      border-radius: 20px;
+      padding: 0.3em 1em;
+      display: inline-block;
+    }
+
+    .pricing-card--featured .pricing-card__savings {
+      background-color: rgba(255,255,255,0.15);
+      color: var(--color-white);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Navegación principal">
+      <div class="nav__inner">
+        <a href="/" class="nav__logo" aria-label="Inicio — Lina Herrera Gall">
+          <img src="assets/logo-linagall.png" alt="Lina.gall" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span style="display:none;">Lina.gall</span>
+        </a>
+
+        <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__links" id="navLinks" role="list">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="membresia-latinizima.html">LATINIZIMA</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <a href="contacto.html" class="btn btn--primary nav__cta">Contáctame</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero--sesion" aria-labelledby="sesion-hero-heading">
+      <div class="container">
+        <p class="eyebrow">Consultoría 1:1 · €297/sesión · Pack 3×€747</p>
+        <h1 id="sesion-hero-heading">Una sesión que te da el mapa completo de qué automatizar y cómo</h1>
+        <p class="hero__subtitle">Trabajamos juntas para identificar exactamente dónde está el cuello de botella en tu negocio y construimos el plan para eliminarlo.</p>
+        <a href="#precios-sesion" class="btn btn--primary">Reservar mi sesión →</a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         QUÉ PASA — 3 pasos
+         ============================================================ -->
+    <section class="section section--lavender" aria-labelledby="que-pasa-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">El proceso</p>
+          <h2 id="que-pasa-heading">¿Qué ocurre en la sesión?</h2>
+        </div>
+        <div class="steps">
+
+          <div class="step">
+            <h3>Diagnóstico</h3>
+            <p>Antes de la sesión me mandas información sobre tu negocio. Llego preparada, no improvisando. Sin perder tiempo en presentaciones.</p>
+          </div>
+
+          <div class="step">
+            <h3>Mapa de procesos</h3>
+            <p>Identificamos qué estás haciendo manualmente, qué se puede automatizar y con qué herramientas — adaptado a tu contexto real.</p>
+          </div>
+
+          <div class="step">
+            <h3>Plan de acción</h3>
+            <p>Te vas con pasos concretos, priorizados y ejecutables. No con una lista infinita de ideas — con los próximos tres movimientos.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PARA QUIÉN
+         ============================================================ -->
+    <section class="section section--peach" aria-labelledby="para-quien-sesion-heading">
+      <div class="container" style="max-width:760px;">
+        <div class="section-header">
+          <h2 id="para-quien-sesion-heading">Esta sesión es para ti si...</h2>
+        </div>
+        <ul class="checklist" style="max-width:560px;margin-inline:auto;">
+          <li>Ya tienes un negocio funcionando y quieres optimizarlo</li>
+          <li>Quieres resultados rápidos sin esperar a terminar un curso</li>
+          <li>Necesitas una visión externa que detecte lo que tú no ves</li>
+          <li>Prefieres el acompañamiento personalizado a los recursos genéricos</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRECIOS
+         ============================================================ -->
+    <section class="section section--lavender" id="precios-sesion" aria-labelledby="precios-sesion-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Elige tu formato</p>
+          <h2 id="precios-sesion-heading">Elige tu formato</h2>
+        </div>
+        <div class="pricing-grid">
+
+          <div class="pricing-card">
+            <span class="pricing-card__name">Sesión individual</span>
+            <div class="pricing-card__price">€297</div>
+            <p class="pricing-card__detail">por sesión</p>
+            <ul class="pricing-card__features">
+              <li>90 minutos de sesión 1:1</li>
+              <li>Grabación completa incluida</li>
+              <li>Plan de acción por escrito</li>
+              <li>Formulario de diagnóstico previo</li>
+            </ul>
+            <a href="#" class="btn btn--primary" style="margin-top:auto;">Reservar sesión →</a>
+          </div>
+
+          <div class="pricing-card pricing-card--featured" style="position:relative;">
+            <span class="pricing-card__badge">Recomendado</span>
+            <span class="pricing-card__name">Pack 3 sesiones</span>
+            <div class="pricing-card__price">€747</div>
+            <p class="pricing-card__detail">pago único · 3 sesiones</p>
+            <span class="pricing-card__savings">Ahorro de €144</span>
+            <ul class="pricing-card__features">
+              <li>3 sesiones de 90 minutos</li>
+              <li>Grabación de cada sesión</li>
+              <li>Plan de acción actualizado</li>
+              <li>Acompañamiento en implementación</li>
+              <li>Ideal para procesos más complejos</li>
+            </ul>
+            <a href="#" class="btn btn--primary" style="margin-top:auto;">Reservar pack →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
+    <section class="section section--peach" aria-labelledby="faq-sesion-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="faq-sesion-heading">Preguntas frecuentes</h2>
+        </div>
+        <div class="faq">
+
+          <div class="faq__item">
+            <p class="faq__question">¿Se graba la sesión?</p>
+            <p class="faq__answer">Sí, recibes la grabación completa para revisar cuando quieras. Sin límite de tiempo de acceso.</p>
+          </div>
+
+          <div class="faq__item">
+            <p class="faq__question">¿Necesito preparar algo?</p>
+            <p class="faq__answer">Te mando un formulario previo para aprovechar cada minuto. Cuanto más detallado lo rellenes, más concreta será la sesión.</p>
+          </div>
+
+          <div class="faq__item">
+            <p class="faq__question">¿Es online o presencial?</p>
+            <p class="faq__answer">Online vía videollamada. Si estás en Barcelona, podemos valorar presencial — escríbeme para hablarlo.</p>
+          </div>
+
+          <div class="faq__item">
+            <p class="faq__question">¿Cuánto tarda la respuesta?</p>
+            <p class="faq__answer">Respondo en menos de 48h con fechas disponibles. Sin asistentes, sin bots — personalmente.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA FINAL — fondo oscuro
+         ============================================================ -->
+    <section class="section section--dark" aria-labelledby="sesion-cta-heading">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 id="sesion-cta-heading">¿Tienes dudas antes de reservar?</h2>
+          <p>Escríbeme por WhatsApp y te respondo personalmente.</p>
+          <div class="cta-banner__actions">
+            <a href="#" class="btn btn--primary">Hablar por WhatsApp →</a>
+            <a href="#precios-sesion" class="btn btn--outline-white">Ver precios →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div>
+          <p class="footer__brand-name">Lina.gall</p>
+          <p class="footer__tagline">Consultora de automatización y marketing digital · Barcelona</p>
+          <nav class="footer__social" aria-label="Redes sociales">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">Li</a>
+            <a href="#" aria-label="TikTok">Tk</a>
+          </nav>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Páginas</p>
+          <ul class="footer__links">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">LATINIZIMA</p>
+          <ul class="footer__links">
+            <li><a href="membresia-latinizima.html">Membresía</a></li>
+            <li><a href="modo-automatico.html">Modo Automático</a></li>
+            <li><a href="sesion-estrategica.html">Sesión Estratégica</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Lina Herrera Gall · linaherreragall.com</span>
+        <span>Hecho con intención — Barcelona</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+
+</body>
+</html>
